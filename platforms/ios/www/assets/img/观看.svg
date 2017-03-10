@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="16px" viewBox="0 0 24 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>观看</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="375" height="100" rx="1"></rect>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="0.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Index" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="正在直播" transform="translate(-240.000000, -183.000000)">
+            <g id="All" transform="translate(0.000000, 110.000000)">
+                <g id="Rectangle">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+                <g id="正在观看与喜欢" transform="translate(145.000000, 72.000000)">
+                    <g id="观看" transform="translate(96.000000, 2.000000)">
+                        <circle id="Oval-6" stroke="#979797" cx="11" cy="7" r="3"></circle>
+                        <path d="M10.9932266,13.6825709 C18.297229,13.6825709 21.724679,7.54688882 21.724679,7.54688882 C22.0248743,7.09074271 22.0213027,6.34035819 21.704853,5.89684122 C21.704853,5.89684122 18.2972285,0 10.9932262,0 C3.68922379,0 0.279652523,5.91025803 0.279652523,5.91025803 C-0.0253865503,6.35799815 -0.0393491532,7.0952495 0.279652579,7.56069577 C0.279652579,7.56069577 3.68922426,13.6825709 10.9932266,13.6825709 Z" id="Oval-7" stroke="#9B9B9B" stroke-width="0.9"></path>
+                    </g>
+                </g>
+                <g id="正在观看与喜欢" transform="translate(145.000000, 72.000000)">
+                    <g id="观看" transform="translate(96.000000, 2.000000)">
+                        <circle id="Oval-6" stroke="#979797" cx="11" cy="7" r="3"></circle>
+                        <path d="M10.9932266,13.6825709 C18.297229,13.6825709 21.724679,7.54688882 21.724679,7.54688882 C22.0248743,7.09074271 22.0213027,6.34035819 21.704853,5.89684122 C21.704853,5.89684122 18.2972285,0 10.9932262,0 C3.68922379,0 0.279652523,5.91025803 0.279652523,5.91025803 C-0.0253865503,6.35799815 -0.0393491532,7.0952495 0.279652579,7.56069577 C0.279652579,7.56069577 3.68922426,13.6825709 10.9932266,13.6825709 Z" id="Oval-7" stroke="#9B9B9B" stroke-width="0.9"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

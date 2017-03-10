@@ -1,0 +1,27 @@
+<!--
+  Generated template for the Help page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="blue">
+    <ion-title style="font-size: 18px;">帮助</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-slides class="contentGray">
+    <ion-list no-lines style="width: 100%;">
+      <div style="height: 8px; background-color: #F5F5F5;"></div>
+      <button ion-item datail-push class="paddingItem" (click)="itemTapped(agreement)">用户协议</button>
+      <div style="height: 2px; background-color: #F5F5F5;"></div>
+      <button ion-item datail-push class="paddingItem" (click)="itemTapped(manual)">使用手册</button>
+      <div style="height: 2px; background-color: #F5F5F5;"></div>
+      <button ion-item datail-push class="paddingItem" (click)="itemTapped(report)">反馈与举报</button>
+    </ion-list>
+  </ion-slides>
+</ion-content>

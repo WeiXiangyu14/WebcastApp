@@ -1,0 +1,45 @@
+<!--
+  Generated template for the Report page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="blue">
+    <ion-title style="font-size: 18px;">反馈与举报</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <!--<ion-slides padding class="contentGray">-->
+    <ion-grid padding class="contentGray" style="height: 100%; width: 100%;">
+      <ion-row center style="height: 44px; font-size: 15px;">
+        <ion-col width-100>
+          请输入您的邮箱
+        </ion-col>
+      </ion-row>
+      <ion-row class="no-padding" style="height: 44px; font-size: 15px;">
+        <ion-col width-100 class="no-padding">
+          <ion-textarea [(ngModel)]="email" class="no-padding myInput" rows="1" style="height: 44px;"> </ion-textarea>
+        </ion-col>
+      </ion-row>
+      <ion-row center style="height: 44px; font-size: 15px;">
+        <ion-col width-100>
+          请输入您的宝贵意见，我们将尽快给您反馈。
+        </ion-col>
+      </ion-row>
+      <ion-row class="no-padding" style="height: 129px; font-size: 15px;">
+        <ion-col width-100 class="no-padding">
+          <ion-textarea [(ngModel)]="content" class="no-padding myInput" rows="6" style="height: 129px;"> </ion-textarea>
+        </ion-col>
+      </ion-row>
+      <div style="height: 32px; background-color: #F5F5F5; text-align: center;">
+        <p *ngIf="error" color="danger" style="font-size:12px;">邮箱地址或者反馈意见不能为空</p>
+      </div>
+      <button ion-button block color="blue" style="font-size: 18px; height: 44px;" (click)="submitReport()">提交反馈</button>
+    </ion-grid>
+  <!--</ion-slides>-->
+</ion-content>

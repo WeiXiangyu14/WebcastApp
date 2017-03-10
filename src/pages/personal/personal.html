@@ -1,0 +1,58 @@
+<!--
+  Generated template for the Personal page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="blue">
+    <ion-title style="font-size: 18px;">个人主页</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-slides class="contentGray">
+    <ion-slide style="width: 100%; height: 520px;">
+      <div style="height: 43px; background-color: #F5F5F5;"></div>
+      <ion-list no-lines>
+        <div style="height: 8px; background-color: #F5F5F5;"></div>
+        <ion-item class="no-padding" style="height: 80px;" (click)="changeImage()">
+          <div class="title" style="padding-left: 22px;" item-left> 
+            头像
+          </div>
+          <ion-avatar class="content" style="padding-right: 22px;" item-right>
+            <img class='avatar' src="{{user.image}}">
+          </ion-avatar>
+        </ion-item>
+        <div style="height: 8px; background-color: #F5F5F5;"></div>
+        <ion-item class="no-padding" style="height: 54px;">
+          <div class="title" style="padding-left: 22px;" item-left>昵称</div>
+          <div class="content" style="padding-right: 22px;" item-right>{{user.name}}</div>
+        </ion-item>
+        <div style="height: 8px; background-color: #F5F5F5;"></div>
+        <ion-item class="no-padding" style="height: 54px;" (click)="changeBoardId()">
+          <div class="title" style="padding-left: 22px;" item-left>花椒直播ID</div>
+          <div class="content" style="padding-right: 22px;" item-right>{{user.boardId}}</div>
+        </ion-item>
+        <div style="height: 8px; background-color: #F5F5F5;"></div>
+        <ion-item class="no-padding" style="height: 81px;" (click)="changeTitle()">
+          <div class="title" style="padding-left: 22px;">我的头衔</div>
+          <div class="content" style="padding-left: 22px;">{{user.title}}</div>
+        </ion-item>
+        <div style="height: 8px; background-color: #F5F5F5;"></div>
+        <ion-item class="no-padding" style="height: 137px;" (click)="changeIntroduction()">
+          <div class="title" style="padding-left: 22px;">我擅长/喜欢直播分享的内容</div>
+          <div class="content" style="padding-left: 22px;">{{user.introduction}}</div>
+        </ion-item>
+        <div style="height: 30px; background-color: #F5F5F5;"></div>
+        <div style="height: 44px; padding-left: 17px; padding-right: 17px;">
+          <button [disabled]=modifyInfo ion-button block color="blue" style="font-size: 18px; height: 44px;" (click)="saveInfo()">保存修改</button>
+        </div>
+      </ion-list>
+    </ion-slide>
+  </ion-slides>
+
+</ion-content>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="31px" height="31px" viewBox="0 0 31 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>我的</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="底部状态栏new" transform="translate(-308.000000, -7.000000)">
+            <g id="我的" transform="translate(308.000000, 7.000000)">
+                <path d="M15.5,31 C24.0604136,31 31,24.0604136 31,15.5 C31,6.93958638 24.0604136,0 15.5,0 C6.93958638,0 0,6.93958638 0,15.5 C0,24.0604136 6.93958638,31 15.5,31 Z" id="Oval" fill="#9B9B9B"></path>
+                <circle id="Oval-2" fill="#FFFFFF" cx="15.5" cy="10.5" r="5.5"></circle>
+                <path d="M8.91692746,19.092692 C9.65897411,17.8876012 11.204309,16.139665 11.204309,16.139665 C11.204309,16.139665 13.2565768,17.7859861 15.5249415,17.7918692 C17.7933061,17.7977523 19.6777845,16.139665 19.6777845,16.139665 C19.6777845,16.139665 20.7782109,17.349143 21.3543521,18.0376593 C21.7938064,18.5628282 22.2077628,19.1006567 22.5148637,19.605758 C23.6714816,21.5080943 24.0498829,23.1181931 24.0498829,23.1181931 L7,23.1181931 C7,23.1181931 7.74424099,20.9971461 8.91692746,19.092692 Z" id="Triangle-2" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>

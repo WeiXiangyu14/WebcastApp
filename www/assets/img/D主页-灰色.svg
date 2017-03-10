@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="31px" height="31px" viewBox="0 0 31 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>地图</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="底部状态栏new" transform="translate(-131.000000, -7.000000)">
+            <g id="地图" transform="translate(131.000000, 7.000000)">
+                <path d="M15.5,31 C24.0604136,31 31,24.0604136 31,15.5 C31,6.93958638 24.0604136,0 15.5,0 C6.93958638,0 0,6.93958638 0,15.5 C0,24.0604136 6.93958638,31 15.5,31 Z" id="Oval" fill="#9B9B9B"></path>
+                <circle id="Oval-4" fill="#9B9B9B" cx="15.5" cy="11.5" r="2.5"></circle>
+                <path d="M13.9677501,7.52236049 C14.8268043,6.82354075 16.2253621,6.82822286 17.0786606,7.52236049 L23.516695,12.759545 C24.3757492,13.4583647 24.1766348,14.0248701 23.0644375,14.0248701 L7.98197328,14.0248701 C6.87314411,14.0248701 6.67641719,13.4536826 7.52971573,12.759545 L13.9677501,7.52236049 Z" id="Triangle" fill="#FFFFFF"></path>
+                <path d="M9,13 L22,13 L22,20.0026083 C22,21.1057373 21.105519,22 19.9967897,22 L16.9314876,22 L16.9314876,18.1040297 L14.0440307,18.1040297 L14.0440307,22 L10.9935345,22 C9.89253579,22 9,21.1041422 9,20.0026083 L9,13 Z" id="Rectangle" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>

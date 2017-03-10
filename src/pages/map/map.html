@@ -1,0 +1,17 @@
+
+
+
+<ion-content>
+
+  <div id="container" style="height:100% ;"></div>
+  <div class="contentGray" style="height: 2% ;width: 50% ;position:absolute;left:25%; top:5%">
+    <ion-segment [(ngModel)]="taskType" color="blue">
+      <ion-segment-button value="doing" (ionSelect)="selectDoing()">
+        正在直播
+      </ion-segment-button>
+      <ion-segment-button value="toDo" (ionSelect)="selectToDo()">
+        等待直播
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+</ion-content>

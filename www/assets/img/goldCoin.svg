@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>金币icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="历史记录" transform="translate(-99.000000, -89.000000)">
+            <g id="金币icon" transform="translate(99.000000, 89.000000)">
+                <circle id="Oval-6" fill-opacity="0.759001359" fill="#4990E2" cx="15" cy="15" r="15"></circle>
+                <ellipse id="Oval" fill="#FFFFFF" cx="15" cy="15" rx="9" ry="9"></ellipse>
+                <circle id="Oval" fill-opacity="0.755802763" fill="#4990E2" cx="15" cy="15" r="3.85714286"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

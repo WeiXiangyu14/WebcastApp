@@ -1,0 +1,49 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "com.ionicframework.goboard746839"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.ionicframework.goboard746839"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.ionicframework.goboard746839"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "com.ionicframework.goboard746839"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.ionicframework.goboard746839"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.ionicframework.goboard746839"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.ionicframework.goboard746839"
+        },
+        "cordova-plugin-themeablebrowser": {
+            "PACKAGE_NAME": "com.ionicframework.goboard746839"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.ionicframework.goboard746839"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.ionicframework.goboard746839"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.ionicframework.goboard746839"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.ionicframework.goboard746839"
+        }
+    }
+}

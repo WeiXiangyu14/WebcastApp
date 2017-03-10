@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>地点icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Index" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="等待直播-任务详情" transform="translate(-17.000000, -210.000000)">
+            <g id="地点" transform="translate(0.000000, 202.000000)">
+                <g id="地点icon" transform="translate(17.000000, 8.000000)">
+                    <path d="M10,20 C15.5228475,20 20,15.5228475 20,10 C20,4.4771525 15.5228475,0 10,0 C4.4771525,0 0,4.4771525 0,10 C0,15.5228475 4.4771525,20 10,20 Z" id="Oval" fill="#9B9B9B"></path>
+                    <path d="M9.16384195,15.3219719 C9.41723658,15.8012886 9.83576156,15.8055508 10.0992649,15.3219719 C10.0992649,15.3219719 13.3858493,9.50810718 13.3858493,7.5483871 C13.3858493,5.58866702 11.9386863,4 9.62265352,4 C7.3066207,4 6,5.58866702 6,7.5483871 C6,9.50810718 9.16384195,15.3219719 9.16384195,15.3219719 Z" id="Oval-3" fill="#FFFFFF"></path>
+                    <circle id="Oval-4" fill="#9B9B9B" cx="9.61290323" cy="7.61290323" r="1.61290323"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

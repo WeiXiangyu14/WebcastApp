@@ -1,0 +1,63 @@
+// tab1
+.ion-ios-tab1 {  
+  content: url("../assets/img/tab-home-after.svg");  
+  height: 31px;
+}  
+  
+.ion-ios-tab1-outline {  
+  content: url("../assets/img/tab-home-before.svg");  
+  height: 31px;
+}  
+  
+.tabs-md .tab-button[aria-selected=true] .ion-md-tab1 {  
+  content: url("../assets/img/tab-home-after.svg");  
+  height: 31px;
+}  
+  
+.tabs-md .tab-button[aria-selected=false] .ion-md-tab1 {  
+  content: url("../assets/img/tab-home-before.svg");  
+  height: 31px;
+} 
+
+// tab2
+.ion-ios-tab2 {  
+  content: url("../assets/img/tab-position-after.svg");  
+  height: 31px;
+}  
+  
+.ion-ios-tab2-outline {  
+  content: url("../assets/img/tab-position-before.svg");  
+  height: 31px;
+}  
+  
+.tabs-md .tab-button[aria-selected=true] .ion-md-tab2 {  
+  content: url("../assets/img/tab-position-after.svg");  
+  height: 31px;
+}  
+  
+.tabs-md .tab-button[aria-selected=false] .ion-md-tab2 {  
+  content: url("../assets/img/tab-position-before.svg");
+  height: 31px;  
+} 
+
+// tab3
+.ion-ios-tab3 {  
+  content: url("../assets/img/tab-person-after.svg");  
+  height: 31px;
+}  
+  
+.ion-ios-tab3-outline {  
+  content: url("../assets/img/tab-person-before.svg");  
+  height: 31px;
+}  
+  
+.tabs-md .tab-button[aria-selected=true] .ion-md-tab3 {  
+  content: url("../assets/img/tab-person-after.svg");  
+  height: 31px;
+}  
+  
+.tabs-md .tab-button[aria-selected=false] .ion-md-tab3 {  
+  content: url("../assets/img/tab-person-before.svg");  
+  height: 31px;
+} 
+

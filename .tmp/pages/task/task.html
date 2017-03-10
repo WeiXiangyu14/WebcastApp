@@ -1,0 +1,79 @@
+<!--
+  Generated template for the task page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="blue">
+    <ion-title style="font-size: 18px;">我的任务</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+      <ion-grid class="no-padding contentGray" style="width: 100%; height: 100%;">
+        <div style="height: 1px; background-color: #FFFFFF;"></div>
+        <div class="task-card" *ngFor="let task of tasks" style="height:101px;">
+          <ion-row class="no-padding" style="background-color:#fff; width: 100%; height: 100px;" (click)="onTaskClick(task, task.state)">
+            <ion-col width-33 class="no-padding" style="background-color: #FFFFFF; height: 100px; font-size:28px; color: #FFFFFF; text-align:center; line-height: 100px;" >
+              <img style="width:100%; height:100%; background-color: #BBB" src="assets/img/preview.png">
+            </ion-col>
+            <ion-col width-67 class="padding-left" style="height: 100px;">
+              <ion-row center class="no-padding" style="height: 25%;">
+                <ion-col width-10 style="padding: 3px 3px 3px 3px;">
+                  <ion-avatar>
+                    <img  style="border-radius: 25px;" src="{{task.taskRecipient.image}}">
+                  </ion-avatar>
+                </ion-col>
+                <ion-col width-40 class="no-padding" style="font-size:9px; color: #4A4A4A;">
+                  {{task.taskRecipient.name}}|{{task.taskRecipient.title}}
+                </ion-col>
+                <ion-col width-50 style="font-size:9px; color: #4A4A4A;">
+                  <!--任务距离失效  {{task.taskLeftTime.displayTime}}-->
+                </ion-col>
+              </ion-row>
+              <ion-row style="height: 50%;">
+                <ion-col width-100 style="font-size: 14px;">
+                  {{task.taskDescription}}
+                </ion-col>
+              </ion-row>
+              <ion-row class="no-padding" center style="height: 20px;">
+                <!--<ion-col width-10></ion-col>-->
+                <ion-col width-10>
+                  <img src="assets/img/money.svg">
+                </ion-col>
+                <ion-col width-10 class="no-padding" style="font-size: 12px;">
+                  {{task.moneyNum}}
+                </ion-col>
+                <ion-col width-10>
+                  <img *ngIf="task.hasFavor" src="assets/img/heart_red.svg">
+                  <img *ngIf="!task.hasFavor" src="assets/img/heart.svg">
+                </ion-col>
+                <ion-col width-10 class="no-padding" style="font-size: 12px;">
+                  {{task.favorNum}}
+                </ion-col>
+                <ion-col width-20>
+                </ion-col>
+                <ion-col width-10 class="no-padding" style="font-size: 12px;">
+                </ion-col>
+                <ion-col width-20 class="no-padding">
+                  <button *ngIf="task.taskTypeNumber == 0" ion-button color="blue" style="width:62px; height:22px; font-size: 9px; color: #ffffff;" >正在直播</button>
+                  <button *ngIf="task.taskTypeNumber == 1" ion-button color="blue" style="width:62px; height:22px; font-size: 9px; color: #ffffff;" >等在直播</button>
+                  <button *ngIf="task.taskTypeNumber == 2" ion-button color="blue" style="width:62px; height:22px; font-size: 9px; color: #ffffff;" >领取任务</button>
+                  <button *ngIf="task.taskTypeNumber == 31" ion-button color="blue" style="width:62px; height:22px; font-size: 9px; color: #ffffff;" >点击评价</button>
+                  <button *ngIf="task.taskTypeNumber == 32" ion-button color="gray" style="width:62px; height:22px; font-size: 9px; color: #000000;" >已经评价</button>
+                  <button *ngIf="task.taskTypeNumber == 33" ion-button color="gray" style="width:62px; height:22px; font-size: 9px; color: #000000;" >查看评价</button>
+                  <button *ngIf="task.taskTypeNumber == 41" ion-button color="gray" style="width:62px; height:22px; font-size: 9px; color: #000000;" >任务成功</button>
+                  <button *ngIf="task.taskTypeNumber == 42" ion-button color="gray" style="width:62px; height:22px; font-size: 9px; color: #000000;" >任务失败</button>
+                  <button *ngIf="task.taskTypeNumber == 5" ion-button color="gray" style="width:62px; height:22px; font-size: 9px; color: #000000;" >任务过期</button>
+                </ion-col>
+              </ion-row>
+            </ion-col>
+          </ion-row>
+          <div style="height: 1px; background-color: #F5F5F5;"></div>
+        </div>
+      </ion-grid>
+</ion-content>

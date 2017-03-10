@@ -1,0 +1,206 @@
+<ion-header>
+  <ion-navbar color="blue">
+    <ion-buttons start>
+      <button ion-button color="white" (click)="addTask()">
+        <img class="pic-button-add" src="assets/img/add.png">
+      </button>
+    </ion-buttons>
+    <ion-title style="font-size: 18px;">GoBoard</ion-title>
+    <ion-buttons end>
+      <button ion-button color="blue" (click)="onMessage()">
+        <img class="pic-button-email" src="assets/img/message.png">
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="contentGray" style="padding: 5px 5px 5px 5px">
+    <ion-segment [(ngModel)]="taskType" color="blue">
+      <ion-segment-button value="doing" (ionSelect)="searchByDoing()">
+        正在直播
+      </ion-segment-button>
+      <ion-segment-button value="toDo" (ionSelect)="searchByToDo()">
+        等待直播
+      </ion-segment-button>
+      <ion-segment-button value="waiting" (ionSelect)="searchByWaiting()">
+        未领任务
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <div [ngSwitch]="taskType"  class='contentGray' style="width: 100%; height: 100%;">
+    <div *ngSwitchCase="'doing'">
+      <ion-grid class="no-padding contentGray" style="width: 100%; height: 100%;">
+        <div style="height: 1px; background-color: #F5F5F5;"></div>
+        <div class="task-card" *ngFor="let task of tasksDoing" style="height:101px;">
+          <ion-row class="no-padding" style="background-color:#fff; width: 100%; height: 100px;">
+            <ion-col width-33 class="no-padding" style="height: 100px;" (click)="onTaskClick(task, taskType)">
+              <img style="width:100%; height:100%; background-color: #BBB" src="assets/img/preview.png">
+            </ion-col>
+            <ion-col width-67 class="padding-left" style="height: 100px;">
+              <ion-row center class="no-padding" style="height: 25%;">
+                <ion-col width-10 style="padding: 3px 3px 3px 3px;">
+                  <ion-avatar>
+                    <img  style="border-radius: 25px;" src="{{ task.taskRecipient.image }}">
+                  </ion-avatar>
+                </ion-col>
+                <ion-col width-40 class="no-padding" style="font-size:9px; color: #4A4A4A;" (click)="onTaskClick(task, taskType)">
+                  {{task.taskRecipient.name}}|{{task.taskRecipient.title}}
+                </ion-col>
+                <ion-col width-50 style="font-size:9px; color: #4A4A4A;" (click)="onTaskClick(task, taskType)">
+                  任务距离结束  {{task.taskLeftTime.displayTime}}
+                </ion-col>
+              </ion-row>
+              <ion-row style="height: 50%;" (click)="onTaskClick(task, taskType)">
+                <ion-col width-100 style="font-size: 14px;">
+                  {{task.taskDescription}}
+                </ion-col>
+              </ion-row>
+              <ion-row class="no-padding" center style="height: 20px;">
+                <!--<ion-col width-10></ion-col>-->
+                <ion-col width-10 (click)="tip(task.id, task.taskName, task.taskOrder)">
+                  <img src="assets/img/money.svg">
+                </ion-col>
+                <ion-col width-10 class="no-padding" style="font-size: 12px;">
+                  {{task.moneyNum}}
+                </ion-col>
+                <ion-col width-10 (click)="favor(task.id, task.taskOrder)">
+                  <img *ngIf="task.hasFavor" src="assets/img/heart_red.svg">
+                  <img *ngIf="!task.hasFavor" src="assets/img/heart.svg">
+                </ion-col>
+                <ion-col width-10 class="no-padding" style="font-size: 12px;">
+                  {{task.favorNum}}
+                </ion-col>
+                <ion-col width-20>
+                  <!--<img src="assets/img/eye.svg">-->
+                </ion-col>
+                <ion-col width-10 class="no-padding" style="font-size: 12px;">
+                  <!--{{task.favorNum}}-->
+                </ion-col>
+                <ion-col width-20 class="no-padding" (click)="onTaskClick(task, taskType)">
+                  <button *ngIf="task.isSelf" ion-button color="blue" style="width:62px; height:22px; font-size: 9px; color: #ffffff;">结束直播</button>
+                  <button *ngIf="!task.isSelf" ion-button color="blue" style="width:62px; height:22px; font-size: 9px; color: #ffffff;">点击观看</button>
+                </ion-col>
+              </ion-row>
+            </ion-col>
+          </ion-row>
+          <div style="height: 1px; background-color: #F5F5F5;"></div>
+        </div>
+      </ion-grid>
+    </div>
+    <div *ngSwitchCase="'toDo'">
+      <ion-grid class="no-padding contentGray" style="width: 100%; height: 100%;">
+        <div style="height: 1px; background-color: #F5F5F5;"></div>
+        <div class="task-card" *ngFor="let task of tasksToDo" style="height:101px;">
+          <ion-row class="no-padding" style="background-color:#fff; width: 100%; height: 100px;">
+            <ion-col width-33 class="no-padding" style="background-color: #4990E2; height: 100px; font-size:28px; color: #FFFFFF; text-align:center; line-height: 100px;" (click)="onTaskClick(task, taskType)" >
+                {{task.taskLeftTime.displayTime}}
+            </ion-col>
+            <ion-col width-67 class="padding-left" style="height: 100px;">
+              <ion-row center class="no-padding" style="height: 25%;">
+                <ion-col width-10 style="padding: 3px 3px 3px 3px;">
+                  <ion-avatar>
+                    <img style="border-radius: 25px;" src="{{ task.taskRecipient.image }}">
+                  </ion-avatar>
+                </ion-col>
+                <ion-col width-40 class="no-padding" style="font-size:9px; color: #4A4A4A;" (click)="onTaskClick(task, taskType)">
+                  {{task.taskRecipient.name}}|{{task.taskRecipient.title}}
+                </ion-col>
+                <ion-col width-50 style="font-size:9px; color: #4A4A4A;" (click)="onTaskClick(task, taskType)">
+                  任务距离开始  {{task.taskLeftTime.displayTime}}
+                </ion-col>
+              </ion-row>
+              <ion-row style="height: 50%;" (click)="onTaskClick(task, taskType)">
+                <ion-col width-100 style="font-size: 14px;">
+                  {{task.taskDescription}}
+                </ion-col>
+              </ion-row>
+              <ion-row class="no-padding" center style="height: 20px;">
+                <!--<ion-col width-10></ion-col>-->
+                <ion-col width-10  (click)="tip(task.id, task.taskName, task.taskOrder)">
+                  <img src="assets/img/money.svg">
+                </ion-col>
+                <ion-col width-10 class="no-padding" style="font-size: 12px;">
+                  {{task.moneyNum}}
+                </ion-col>
+                <ion-col width-10 (click)="favor(task.id, task.taskOrder)">
+                  <img *ngIf="task.hasFavor" src="assets/img/heart_red.svg">
+                  <img *ngIf="!task.hasFavor" src="assets/img/heart.svg">
+                </ion-col>
+                <ion-col width-10 class="no-padding" style="font-size: 12px;">
+                  {{task.favorNum}}
+                </ion-col>
+                <ion-col width-20>
+                </ion-col>
+                <ion-col width-10 class="no-padding" style="font-size: 12px;">
+                </ion-col>
+                <ion-col width-20 class="no-padding" (click)="onTaskClick(task, taskType)">
+                  <button *ngIf="task.isSelf" ion-button color="blue" style="width:62px; height:22px; font-size: 9px; color: #ffffff;">开始直播</button>
+                  <button *ngIf="!task.isSelf" ion-button color="blue" style="width:62px; height:22px; font-size: 9px; color: #ffffff;">开启提醒</button>
+                </ion-col>
+              </ion-row>
+            </ion-col>
+          </ion-row>
+          <div style="height: 1px; background-color: #F5F5F5;"></div>
+        </div>
+      </ion-grid>
+    </div>
+    <div *ngSwitchCase="'waiting'">
+      <ion-grid class="no-padding contentGray" style="width: 100%; height: 100%;">
+        <div style="height: 1px; background-color: #F5F5F5;"></div>
+        <div class="task-card" *ngFor="let task of tasksWaiting" style="height:101px;">
+          <ion-row class="no-padding" style="background-color:#fff; width: 100%; height: 100px;">
+            <ion-col width-33 class="no-padding" style="background-color: #9B9B9B; height: 100px; font-size:28px; color: #FFFFFF; text-align:center; line-height: 100px;" (click)="onTaskClick(task, taskType)" >
+                {{task.taskLeftTime.displayTime}}
+            </ion-col>
+            <ion-col width-67 class="padding-left" style="height: 100px;">
+              <ion-row center class="no-padding" style="height: 25%;">
+                <ion-col width-10 style="padding: 3px 3px 3px 3px;">
+                  <ion-avatar>
+                    <img  style="border-radius: 25px;" src="{{ task.taskInitiator.image }}">
+                  </ion-avatar>
+                </ion-col>
+                <ion-col width-40 class="no-padding" style="font-size:9px; color: #4A4A4A;" (click)="onTaskClick(task, taskType)">
+                  {{task.taskInitiator.name}}|{{task.taskInitiator.title}}
+                </ion-col>
+                <ion-col width-50 style="font-size:9px; color: #4A4A4A;" (click)="onTaskClick(task, taskType)">
+                  任务距离失效  {{task.taskLeftTime.displayTime}}
+                </ion-col>
+              </ion-row>
+              <ion-row style="height: 50%;" (click)="onTaskClick(task, taskType)">
+                <ion-col width-100 style="font-size: 14px;">
+                  {{task.taskDescription}}
+                </ion-col>
+              </ion-row>
+              <ion-row class="no-padding" center style="height: 20px;">
+                <!--<ion-col width-10></ion-col>-->
+                <ion-col width-10  (click)="tip(task.id, task.taskName, task.taskOrder)">
+                  <img src="assets/img/money.svg">
+                </ion-col>
+                <ion-col width-10 class="no-padding" style="font-size: 12px;">
+                  {{task.moneyNum}}
+                </ion-col>
+                <ion-col width-10 (click)="favor(task.id, task.taskOrder)">
+                  <img *ngIf="task.hasFavor" src="assets/img/heart_red.svg">
+                  <img *ngIf="!task.hasFavor" src="assets/img/heart.svg">
+                </ion-col>
+                <ion-col width-10 class="no-padding" style="font-size: 12px;">
+                  {{task.favorNum}}
+                </ion-col>
+                <ion-col width-20>
+                </ion-col>
+                <ion-col width-10 class="no-padding" style="font-size: 12px;">
+                </ion-col>
+                <ion-col width-20 class="no-padding" (click)="onTaskClick(task, taskType)">
+                  <button ion-button color="blue" style="width:62px; height:22px; font-size: 9px; color: #ffffff;" >领取任务</button>
+                </ion-col>
+              </ion-row>
+            </ion-col>
+          </ion-row>
+          <div style="height: 1px; background-color: #F5F5F5;"></div>
+        </div>
+      </ion-grid>
+    </div>
+  </div>
+</ion-content>

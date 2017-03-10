@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar color="blue">
+    <ion-title style="font-size: 18px;">我的账户</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="history()" style="font-size: 16px;">历史记录</button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-slides class="contentGray" style="width: 100%; height: 100%;">
+    <ion-grid class="no-padding" style="width: 100%; height: 372px;">
+      <ion-row center style="height: 165px; background-color: #75ABE9;">
+        <ion-col width-50 text-center>
+          <div style="color: #FFFFFF; font-size: 14px;">今日金币收益</div>
+          <br/>
+          <div style="color: #FFFFFF; font-size: 48px;">{{myWallet.todayGoldCoin}}</div>
+        </ion-col>
+        <ion-col width-50 text-center>
+          <div style="color: #FFFFFF; font-size: 14px;">今日积分收益</div>
+          <br/>
+          <div style="color: #FFFFFF; font-size: 48px;">{{myWallet.todayPoint}}</div>
+        </ion-col>
+      </ion-row>
+      <div style="height: 8px; background-color: #F5F5F5;"></div>
+      <ion-row center style="height: 107px; background-color: #FFFFFF;">
+        <ion-col width-50 text-center>
+          <div style="color: #4A4A4A; font-size: 14px;">我的金币</div>
+          <div style="color: #4990E2; font-size: 36px;">{{myWallet.totalGoldCoin}}</div>
+        </ion-col>
+        <ion-col width-50 text-center>
+          <div style="color: #4A4A4A; font-size: 14px;">我的积分</div>
+          <div style="color: #4990E2; font-size: 36px;">{{myWallet.totalPoint}}</div>
+        </ion-col>
+      </ion-row>
+      <div style="height: 48px; background-color: #F5F5F5;"></div>
+      <div style="height: 44px; padding-left: 17px; padding-right: 17px;">
+        <button ion-button block color="blue" style="font-size: 18px; height: 44px;" (click)="recharge()">我想充值</button>
+      </div>
+    </ion-grid>
+  </ion-slides>
+</ion-content>
